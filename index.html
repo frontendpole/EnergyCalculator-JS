@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Energy Demand Calculator</title>
+</head>
+
+<body>
+  <h1>Calculate your daily energy demand</h1>
+  <form id="data">
+    <div>
+      <input id="age" type="text" placeholder="Age">
+    </div>
+    <div class="custom-select">
+      <select id="sex" name="sex">
+        <option value="male">Sex</option>
+        <option value="male">male</option>
+        <option value="female">female</option>
+      </select>
+    </div>
+    <div>
+      <input id="weight" type="text" placeholder="Body weight">
+    </div>
+    <div class="custom-select">
+      <select id="lifestyle" name="lifestyle">
+        <option value="sedentary">Lifestyle</option>
+        <option value="sedentary">sedentary</option>
+        <option value="moderate">moderate</option>
+        <option value="active">active</option>
+      </select>
+    </div>
+  </form>
+  <button id="start">Calculate</button>
+  <div class="result"></div>
+  <script src="Calculator.js"></script>
+</body>
+
+</html>
