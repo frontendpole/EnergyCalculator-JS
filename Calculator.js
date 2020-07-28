@@ -13,43 +13,31 @@ class Calculator {
       if (this.inputAge.value >= 10 && this.inputAge.value <= 18) {
         if (this.inputSex.value === 'male') {
           let result = (this.inputWeight.value * 17.5) + 651;
-          let lifestyleValue = this.inputLifestyle.value === 'sedentary' ? 1.4 : this.inputLifestyle.value === 'moderate' ? 1.7 : this.inputLifestyle.value === 'active' ? 2 : console.log('something wrong with the result');
-          result = result * lifestyleValue;
-          this.resultDiv.textContent = `${Math.floor(result)} kcal`;
+          this.showResult(result);
         }
         if (this.inputSex.value === 'female') {
           let result = (this.inputWeight.value * 12.2) + 746;
-          let lifestyleValue = this.inputLifestyle.value === 'sedentary' ? 1.4 : this.inputLifestyle.value === 'moderate' ? 1.7 : this.inputLifestyle.value === 'active' ? 2 : console.log('something wrong with the result');
-          result = result * lifestyleValue;
-          this.resultDiv.textContent = `${Math.floor(result)} kcal`;
+          this.showResult(result);
         }
       }
       else if (this.inputAge.value >= 19 && this.inputAge.value <= 30) {
         if (this.inputSex.value === 'male') {
           let result = (this.inputWeight.value * 15.3) + 679;
-          let lifestyleValue = this.inputLifestyle.value === 'sedentary' ? 1.4 : this.inputLifestyle.value === 'moderate' ? 1.7 : this.inputLifestyle.value === 'active' ? 2 : console.log('something wrong with the result');
-          result = result * lifestyleValue;
-          this.resultDiv.textContent = `${Math.floor(result)} kcal`;
+          this.showResult(result);
         }
         if (this.inputSex.value === 'female') {
           let result = (this.inputWeight.value * 14.7) + 496;
-          let lifestyleValue = this.inputLifestyle.value === 'sedentary' ? 1.4 : this.inputLifestyle.value === 'moderate' ? 1.7 : this.inputLifestyle.value === 'active' ? 2 : console.log('something wrong with the result');
-          result = result * lifestyleValue;
-          this.resultDiv.textContent = `${Math.floor(result)} kcal`;
+          this.showResult(result);
         }
       }
       else if (this.inputAge.value >= 31 && this.inputAge.value <= 100) {
         if (this.inputSex.value === 'male') {
           let result = (this.inputWeight.value * 11.6) + 879;
-          let lifestyleValue = this.inputLifestyle.value === 'sedentary' ? 1.4 : this.inputLifestyle.value === 'moderate' ? 1.7 : this.inputLifestyle.value === 'active' ? 2 : console.log('something wrong with the result');
-          result = result * lifestyleValue;
-          this.resultDiv.textContent = `${Math.floor(result)} kcal`;
+          this.showResult(result);
         }
         if (this.inputSex.value === 'female') {
           let result = (this.inputWeight.value * 8.7) + 829;
-          let lifestyleValue = this.inputLifestyle.value === 'sedentary' ? 1.4 : this.inputLifestyle.value === 'moderate' ? 1.7 : this.inputLifestyle.value === 'active' ? 2 : console.log('something wrong with the result');
-          result = result * lifestyleValue;
-          this.resultDiv.textContent = `${Math.floor(result)} kcal`;
+          this.showResult(result);
         }
       }
       else {
@@ -58,6 +46,12 @@ class Calculator {
     } else {
       alert('Please put all of the data.')
     }
+  }
+
+  showResult(result) {
+    let lifestyleValue = this.inputLifestyle.value === 'sedentary' ? 1.4 : this.inputLifestyle.value === 'moderate' ? 1.7 : this.inputLifestyle.value === 'active' ? 2 : console.log('something wrong with the result');
+    result = result * lifestyleValue;
+    this.resultDiv.textContent = `${Math.floor(result)} kcal`;
   }
 }
 
